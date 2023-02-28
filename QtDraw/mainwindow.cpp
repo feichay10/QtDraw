@@ -12,7 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
     pixmap.fill(QColor("white"));
 
     DrawRight();
+
     connect(ui->rightButton,&QPushButton::clicked,this,&MainWindow::DrawRight);
+    connect(ui->downButton,&QPushButton::clicked,this,&MainWindow::DrawDown);
+
     QMenu *fileMenu = menuBar()->addMenu("File");
     fileMenu->addAction("Exit",this,&MainWindow::close);
 }
@@ -27,6 +30,15 @@ void MainWindow::DrawRight()
     QPushButton *a = new QPushButton;
 }
 
+void MainWindow::DrawDown()
+{
+    QPainter painter(&pixmap);
+    painter.setPen(QPen(Qt::green, 5));
+    painter.drawLine(100, cursor, 100, cursor+20);  // Cambio en las coordenadas
+    ui->label->setPixmap(pixmap);
+    cursor += 20;  // Cambio en la dirección del cursor
+    QPushButton *a = new QPushButton;
+}
 
 MainWindow::~MainWindow()
 {
