@@ -5,12 +5,11 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , pixmap{750,400}
-    , cursor{0}
+    , x{40}
+    , y{40}
 {
     ui->setupUi(this);
-
     pixmap.fill(QColor("white"));
-
     DrawRight();
 
     connect(ui->rightButton,&QPushButton::clicked,this,&MainWindow::DrawRight);
@@ -24,9 +23,9 @@ void MainWindow::DrawRight()
 {
     QPainter painter(&pixmap);
     painter.setPen(QPen(Qt::green,5));
-    painter.drawLine(cursor,100,cursor+20,100);
+    painter.drawLine(x, y, x+20, y);
     ui->label->setPixmap(pixmap);
-    cursor+=20;
+    x += 20;
     QPushButton *a = new QPushButton;
 }
 
@@ -34,9 +33,9 @@ void MainWindow::DrawDown()
 {
     QPainter painter(&pixmap);
     painter.setPen(QPen(Qt::green, 5));
-    painter.drawLine(100, cursor, 100, cursor+20);  // Cambio en las coordenadas
+    painter.drawLine(x ,y ,x ,y+20);
     ui->label->setPixmap(pixmap);
-    cursor += 20;  // Cambio en la dirección del cursor
+    y += 20;
     QPushButton *a = new QPushButton;
 }
 
