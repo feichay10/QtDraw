@@ -26,6 +26,6 @@ private:
     Ui::MainWindow *ui;
     QPixmap pixmap;
     int cursor;
-    int x, y;
+    int x, y; // cursor coordinates
 };
 #endif // MAINWINDOW_H

@@ -9,7 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     , y{40}
 {
     ui->setupUi(this);
+
     pixmap.fill(QColor("white"));
+
     DrawRight();
 
     connect(ui->rightButton,&QPushButton::clicked,this,&MainWindow::DrawRight);
@@ -18,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     QMenu *fileMenu = menuBar()->addMenu("File");
     fileMenu->addAction("Exit",this,&MainWindow::close);
 }
+
 
 void MainWindow::DrawRight()
 {
@@ -38,6 +41,7 @@ void MainWindow::DrawDown()
     y += 20;
     QPushButton *a = new QPushButton;
 }
+
 
 MainWindow::~MainWindow()
 {

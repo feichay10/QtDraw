@@ -91,3 +91,11 @@
 175	1633	1677606218939779288	CMakeFiles/QtDraw.dir/main.cpp.o	804a50909f845486
 175	1685	1677606218995778665	CMakeFiles/QtDraw.dir/mainwindow.cpp.o	11e11f8391db4e68
 1686	2101	1677606219407774082	QtDraw	3837bdef5c216b76
+1	164	1677606338282496673	QtDraw_autogen/timestamp	af4213f429e533b4
+1	164	1677606338282496673	QtDraw_autogen/mocs_compilation.cpp	af4213f429e533b4
+1	164	1677606338282496673	/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/QtDraw_autogen/timestamp	af4213f429e533b4
+1	164	1677606338282496673	/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/QtDraw_autogen/mocs_compilation.cpp	af4213f429e533b4
+164	1471	1677606339590483080	CMakeFiles/QtDraw.dir/QtDraw_autogen/mocs_compilation.cpp.o	e6466ec945e7a7fd
+165	1678	1677606339794480962	CMakeFiles/QtDraw.dir/mainwindow.cpp.o	11e11f8391db4e68
+165	1744	1677606339862480255	CMakeFiles/QtDraw.dir/main.cpp.o	804a50909f845486
+1744	2215	1677606340330475395	QtDraw	3837bdef5c216b76
