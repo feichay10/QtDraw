@@ -4,11 +4,13 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , pixmap{200,200}
+    , pixmap{750,400}
     , cursor{0}
 {
     ui->setupUi(this);
-    pixmap.fill(QColor("transparent"));
+
+    pixmap.fill(QColor("white"));
+
     DrawRight();
     connect(ui->rightButton,&QPushButton::clicked,this,&MainWindow::DrawRight);
     QMenu *fileMenu = menuBar()->addMenu("File");
