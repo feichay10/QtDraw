@@ -21,6 +21,7 @@ public:
 public slots:
     void DrawRight();
     void DrawDown();
+    void DrawUp();
 
 private:
     Ui::MainWindow *ui;

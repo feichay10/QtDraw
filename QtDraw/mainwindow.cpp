@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->rightButton,&QPushButton::clicked,this,&MainWindow::DrawRight);
     connect(ui->downButton,&QPushButton::clicked,this,&MainWindow::DrawDown);
+    connect(ui->upButton,&QPushButton::clicked,this,&MainWindow::DrawUp);
 
     QMenu *fileMenu = menuBar()->addMenu("File");
     fileMenu->addAction("Exit",this,&MainWindow::close);
@@ -42,6 +43,15 @@ void MainWindow::DrawDown()
     QPushButton *a = new QPushButton;
 }
 
+void MainWindow::DrawUp()
+{
+    QPainter painter(&pixmap);
+    painter.setPen(QPen(Qt::green, 5));
+    painter.drawLine(x, y, x, y-20);
+    ui->label->setPixmap(pixmap);
+    y -= 20;
+    QPushButton *a = new QPushButton;
+}
 
 MainWindow::~MainWindow()
 {
