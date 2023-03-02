@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QPixmap>
 #include <QPainter>
+#include <QInputDialog>     // To select width
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,10 +25,14 @@ public slots:
     void DrawUp();
     void DrawLeft();
 
+private slots:
+    void EditWidth();
+
 private:
     Ui::MainWindow *ui;
     QPixmap pixmap;
     int cursor;
-    int x, y; // cursor coordinates
+    int x, y;           // cursor coordinates
+    int width;          // width
 };
 #endif // MAINWINDOW_H

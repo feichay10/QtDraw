@@ -11,13 +11,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     pixmap.fill(QColor("white"));
-
     DrawRight();
 
     connect(ui->rightButton,&QPushButton::clicked,this,&MainWindow::DrawRight);
     connect(ui->downButton,&QPushButton::clicked,this,&MainWindow::DrawDown);
     connect(ui->upButton,&QPushButton::clicked,this,&MainWindow::DrawUp);
     connect(ui->leftButton,&QPushButton::clicked,this,&MainWindow::DrawLeft);
+
+    connect(ui->editWidth,SIGNAL(triggered()),this,SLOT(EditWidth()));
 
     QMenu *fileMenu = menuBar()->addMenu("File");
     fileMenu->addAction("Exit",this,&MainWindow::close);
@@ -27,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::DrawRight()
 {
     QPainter painter(&pixmap);
-    painter.setPen(QPen(Qt::green,5));
+    painter.setPen(QPen(Qt::green, width));
     painter.drawLine(x, y, x+20, y);
     ui->label->setPixmap(pixmap);
     x += 20;
@@ -37,7 +38,7 @@ void MainWindow::DrawRight()
 void MainWindow::DrawDown()
 {
     QPainter painter(&pixmap);
-    painter.setPen(QPen(Qt::green, 5));
+    painter.setPen(QPen(Qt::green, width));
     painter.drawLine(x ,y ,x ,y+20);
     ui->label->setPixmap(pixmap);
     y += 20;
@@ -47,7 +48,7 @@ void MainWindow::DrawDown()
 void MainWindow::DrawUp()
 {
     QPainter painter(&pixmap);
-    painter.setPen(QPen(Qt::green, 5));
+    painter.setPen(QPen(Qt::green, width));
     painter.drawLine(x, y, x, y-20);
     ui->label->setPixmap(pixmap);
     y -= 20;
@@ -57,11 +58,16 @@ void MainWindow::DrawUp()
 void MainWindow::DrawLeft()
 {
     QPainter painter(&pixmap);
-    painter.setPen(QPen(Qt::green,5));
+    painter.setPen(QPen(Qt::green, width));
     painter.drawLine(x, y, x-20, y);
     ui->label->setPixmap(pixmap);
     x -= 20;
     QPushButton *a = new QPushButton;
+}
+
+void MainWindow::EditWidth()
+{
+    width = QInputDialog::getInt(this, "Pen Width", "Enter a width:", 10, 1);
 }
 
 MainWindow::~MainWindow()
