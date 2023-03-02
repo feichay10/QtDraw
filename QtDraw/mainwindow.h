@@ -33,6 +33,6 @@ private:
     QPixmap pixmap;
     int cursor;
     int x, y;           // cursor coordinates
-    int width;          // width
+    int width = 5;          // width
 };
 #endif // MAINWINDOW_H

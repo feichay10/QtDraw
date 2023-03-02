@@ -32,7 +32,7 @@ void MainWindow::DrawRight()
     painter.drawLine(x, y, x+20, y);
     ui->label->setPixmap(pixmap);
     x += 20;
-    QPushButton *a = new QPushButton;
+    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::DrawDown()
@@ -42,7 +42,7 @@ void MainWindow::DrawDown()
     painter.drawLine(x ,y ,x ,y+20);
     ui->label->setPixmap(pixmap);
     y += 20;
-    QPushButton *a = new QPushButton;
+    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::DrawUp()
@@ -52,7 +52,7 @@ void MainWindow::DrawUp()
     painter.drawLine(x, y, x, y-20);
     ui->label->setPixmap(pixmap);
     y -= 20;
-    QPushButton *a = new QPushButton;
+    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::DrawLeft()
@@ -62,7 +62,7 @@ void MainWindow::DrawLeft()
     painter.drawLine(x, y, x-20, y);
     ui->label->setPixmap(pixmap);
     x -= 20;
-    QPushButton *a = new QPushButton;
+    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::EditWidth()
