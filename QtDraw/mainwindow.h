@@ -6,6 +6,7 @@
 #include <QPixmap>
 #include <QPainter>
 #include <QInputDialog>     // To select width
+#include <QColorDialog>     // To select colour
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,12 +28,14 @@ public slots:
 
 private slots:
     void EditWidth();
+    void EditColour();
 
 private:
     Ui::MainWindow *ui;
     QPixmap pixmap;
     int cursor;
-    int x, y;           // cursor coordinates
+    int x, y;               // cursor coordinates
     int width = 5;          // width
+    QColor colour;          // colour
 };
 #endif // MAINWINDOW_H

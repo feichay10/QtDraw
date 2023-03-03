@@ -110,12 +110,18 @@
      <string>Style</string>
     </property>
     <addaction name="editWidth"/>
+    <addaction name="editColor"/>
    </widget>
    <addaction name="menuStyle"/>
   </widget>
   <action name="editWidth">
    <property name="text">
     <string>Width</string>
+   </property>
+  </action>
+  <action name="editColor">
+   <property name="text">
+    <string>Color</string>
    </property>
   </action>
  </widget>
