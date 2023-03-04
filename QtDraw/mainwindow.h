@@ -7,6 +7,7 @@
 #include <QPainter>
 #include <QInputDialog>     // To select width
 #include <QColorDialog>     // To select colour
+#include <QFileDialog>      // To save the draw
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +30,7 @@ public slots:
 private slots:
     void EditWidth();
     void EditColour();
+    void DrawSave();
 
 private:
     Ui::MainWindow *ui;

@@ -112,6 +112,13 @@
     <addaction name="editWidth"/>
     <addaction name="editColor"/>
    </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="drawSave"/>
+   </widget>
+   <addaction name="menuFile"/>
    <addaction name="menuStyle"/>
   </widget>
   <action name="editWidth">
@@ -122,6 +129,16 @@
   <action name="editColor">
    <property name="text">
     <string>Color</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="drawSave">
+   <property name="text">
+    <string>Save</string>
    </property>
   </action>
  </widget>

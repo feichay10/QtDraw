@@ -21,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->editWidth,SIGNAL(triggered()),this,SLOT(EditWidth()));
     connect(ui->editColor,SIGNAL(triggered()),this,SLOT(EditColour()));
 
+    connect(ui->drawSave,SIGNAL(triggered()),this,SLOT(DrawSave()));
+
     QMenu *fileMenu = menuBar()->addMenu("File");
     fileMenu->addAction("Exit",this,&MainWindow::close);
 }
@@ -74,6 +76,14 @@ void MainWindow::EditWidth()
 void MainWindow::EditColour()
 {
     colour = QColorDialog::getColor(Qt::green, this, "Pen color");
+}
+
+void MainWindow::DrawSave()
+{
+    QString file_name = QFileDialog::getSaveFileName(this, tr("Save draw"), QDir::currentPath(), tr("Image Files (*.png, *.jpg);;All Files(*)"));
+    if (file_name != "") {
+        ui->label->grab().save(file_name);
+    }
 }
 
 MainWindow::~MainWindow()
