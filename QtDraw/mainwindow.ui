@@ -117,6 +117,7 @@
      <string>File</string>
     </property>
     <addaction name="drawSave"/>
+    <addaction name="showHelp"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuStyle"/>
@@ -139,6 +140,11 @@
   <action name="drawSave">
    <property name="text">
     <string>Save</string>
+   </property>
+  </action>
+  <action name="showHelp">
+   <property name="text">
+    <string>Help</string>
    </property>
   </action>
  </widget>
