@@ -118,6 +118,7 @@
     </property>
     <addaction name="drawSave"/>
     <addaction name="showHelp"/>
+    <addaction name="actionExit"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuStyle"/>
@@ -132,11 +133,6 @@
     <string>Color</string>
    </property>
   </action>
-  <action name="actionExit">
-   <property name="text">
-    <string>Exit</string>
-   </property>
-  </action>
   <action name="drawSave">
    <property name="text">
     <string>Save</string>
@@ -145,6 +141,11 @@
   <action name="showHelp">
    <property name="text">
     <string>Help</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
    </property>
   </action>
  </widget>

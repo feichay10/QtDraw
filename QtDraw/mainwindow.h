@@ -33,6 +33,7 @@ private slots:
     void EditColour();
     void DrawSave();
     void HelpMessage();
+    void Exit();
 
 private:
     Ui::MainWindow *ui;
