@@ -36,6 +36,6 @@ private:
     int cursor;
     int x, y;               // cursor coordinates
     int width = 5;          // width
-    QColor colour;          // colour
+    QColor colour = Qt::green;          // colour
 };
 #endif // MAINWINDOW_H

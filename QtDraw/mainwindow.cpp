@@ -73,7 +73,7 @@ void MainWindow::EditWidth()
 
 void MainWindow::EditColour()
 {
-    colour = QColorDialog::getColor(Qt::black, this, "Pen color");
+    colour = QColorDialog::getColor(Qt::green, this, "Pen color");
 }
 
 MainWindow::~MainWindow()
