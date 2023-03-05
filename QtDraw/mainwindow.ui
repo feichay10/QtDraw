@@ -124,7 +124,7 @@
   </action>
   <action name="editColor">
    <property name="text">
-    <string>Color</string>
+    <string>Colour</string>
    </property>
   </action>
   <action name="drawSave">
