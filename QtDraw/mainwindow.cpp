@@ -90,6 +90,7 @@ void MainWindow::HelpMessage()
     QString help_message = "\nDraw help.\n\n\n1.Save\nYou can save by clicking on the menu bar \"File/Save\" and then you can choose the file destination.\n\n";
     help_message += "2.Change colour\nYou can change the pen colour by clicking on the menu bar \"Style/Colour\".\n\n";
     help_message += "3. Change width\n You can change the pen width by clicking on the menu bar \"Style/Width\".\n\n";
+    help_message += "4. Exit \nYou can exit this program by clicking on the menu bar \"File/Exit\".\n\n";
     QMessageBox::information(this,tr("Draw help"), help_message);
 }
 
