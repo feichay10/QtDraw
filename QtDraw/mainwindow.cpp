@@ -21,16 +21,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->editWidth,SIGNAL(triggered()),this,SLOT(EditWidth()));
     connect(ui->editColor,SIGNAL(triggered()),this,SLOT(EditColour()));
 
-    connect(ui->drawSave,SIGNAL(triggered()),this,SLOT(DrawSave()));
-
-    connect(ui->showHelp,SIGNAL(triggered()),this,SLOT(HelpMessage()));
-
-    connect(ui->actionExit,SIGNAL(triggered()),this,SLOT(Exit()));
-
     QMenu *fileMenu = menuBar()->addMenu("File");
+    fileMenu->addAction("Save",this,&MainWindow::DrawSave);
+    fileMenu->addAction("Help",this,&MainWindow::HelpMessage);
     fileMenu->addAction("Exit",this,&MainWindow::close);
 }
-
 
 void MainWindow::DrawRight()
 {
@@ -96,11 +91,6 @@ void MainWindow::HelpMessage()
     help_message += "2.Change colour\nYou can change the pen colour by clicking on the menu bar \"Style/Colour\".\n\n";
     help_message += "3. Change width\n You can change the pen width by clicking on the menu bar \"Style/Width\".\n\n";
     QMessageBox::information(this,tr("Draw help"), help_message);
-}
-
-void MainWindow::Exit()
-{
-    close();
 }
 
 MainWindow::~MainWindow()
