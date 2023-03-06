@@ -1,9 +1,0 @@
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/QtDraw.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/install.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/install/local.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/install/strip.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/QtDraw_autogen_timestamp_deps.dir
-/home/feichay/Escritorio/Practicas-SOA/2223-soa-qtdraw-feichay10/build-QtDraw-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/QtDraw_autogen.dir
