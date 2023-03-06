@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     pixmap.fill(QColor("white"));
     DrawRight();
+    ReadSettings();
 
     connect(ui->rightButton,&QPushButton::clicked,this,&MainWindow::DrawRight);
     connect(ui->downButton,&QPushButton::clicked,this,&MainWindow::DrawDown);
@@ -27,6 +28,12 @@ MainWindow::MainWindow(QWidget *parent)
     fileMenu->addAction("Exit",this,&MainWindow::close);
 }
 
+MainWindow::~MainWindow()
+{
+    WriteSettings();
+    delete ui;
+}
+
 void MainWindow::DrawRight()
 {
     QPainter painter(&pixmap);
@@ -34,7 +41,6 @@ void MainWindow::DrawRight()
     painter.drawLine(x, y, x+20, y);
     ui->label->setPixmap(pixmap);
     x += 20;
-    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::DrawDown()
@@ -44,7 +50,6 @@ void MainWindow::DrawDown()
     painter.drawLine(x ,y ,x ,y+20);
     ui->label->setPixmap(pixmap);
     y += 20;
-    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::DrawUp()
@@ -54,7 +59,6 @@ void MainWindow::DrawUp()
     painter.drawLine(x, y, x, y-20);
     ui->label->setPixmap(pixmap);
     y -= 20;
-    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::DrawLeft()
@@ -64,7 +68,6 @@ void MainWindow::DrawLeft()
     painter.drawLine(x, y, x-20, y);
     ui->label->setPixmap(pixmap);
     x -= 20;
-    //QPushButton *a = new QPushButton;
 }
 
 void MainWindow::EditWidth()
@@ -94,10 +97,34 @@ void MainWindow::HelpMessage()
     QMessageBox::information(this,tr("Draw help"), help_message);
 }
 
-MainWindow::~MainWindow()
+void MainWindow::WriteSettings()
 {
-//    https://stackoverflow.com/questions/16362191/qt-grab-widget-and-save-image
-    ui->label->grab().save("image.png");
-    delete ui;
+    QSettings settings("MySoft", "Monster Energy");
+
+    settings.beginGroup("MainWindow");
+    settings.setValue("geometry", saveGeometry()); // Save the actual geometry of the window
+    settings.setValue("penColour", colour);
+    settings.setValue("penWidth", width);
+    settings.endGroup();
 }
 
+void MainWindow::ReadSettings()
+{
+    QSettings settings("MySoft", "Monster Energy");
+
+    settings.beginGroup("MainWindow");
+    const auto geometry = settings.value("geometry", QByteArray()).toByteArray();
+    if (geometry.isEmpty()) {
+        setGeometry(200, 200, 1037, 665);
+    } else {
+        restoreGeometry(geometry);
+    }
+
+    if (settings.value("penWidth").isNull()) {
+        width = 5;
+    } else {
+        width = settings.value("penWidth").toInt();
+    }
+    colour = settings.value("penColour").value<QColor>();
+    settings.endGroup();
+}

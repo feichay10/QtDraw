@@ -9,6 +9,7 @@
 #include <QColorDialog>     // To select colour
 #include <QFileDialog>      // To save the draw
 #include <QMessageBox>      // To show help message
+#include <QSettings>        // To save colour and width selected
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -33,13 +34,15 @@ private slots:
     void EditColour();
     void DrawSave();
     void HelpMessage();
+    void WriteSettings();
+    void ReadSettings();
 
 private:
     Ui::MainWindow *ui;
     QPixmap pixmap;
     int cursor;
-    int x, y;               // cursor coordinates
-    int width = 5;          // width
-    QColor colour = Qt::green;          // colour
+    int x, y;                   // cursor coordinates
+    int width;                  // width
+    QColor colour = Qt::white;  // colour
 };
 #endif // MAINWINDOW_H
