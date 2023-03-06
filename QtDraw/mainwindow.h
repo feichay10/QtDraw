@@ -1,3 +1,21 @@
+/**
+ *
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Degree: Informatics Engineering
+ * Subject: Sistemas Operativos Avanzados
+ * Grade: 3º
+ * Practice 1: QtDraw
+ * @file mainwindow.h
+ * @author Cheuk Kelly Ng Pante (alu0101364544@ull.edu.es)
+ * @brief This file contains the declaration of the MainWindow class
+ * @version 0.2
+ * @date 2023-03-07
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
